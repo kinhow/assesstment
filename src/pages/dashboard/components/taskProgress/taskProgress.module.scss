@@ -1,0 +1,21 @@
+@import '../../../../scss/components/variable';
+
+.taskBox {
+  @extend %task-box;
+
+  .taskName {
+    @extend %font-style;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: $secondary-text-color;
+  }
+
+  .taskInner {
+    @extend %valign;
+
+    .taskCircle {
+      width: 80px;
+    }
+  }
+}

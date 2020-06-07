@@ -1,0 +1,5 @@
+@import '../../scss/components/variable';
+
+.image {
+  @extend %responsive-img;
+}

@@ -1,0 +1,22 @@
+@import '../../../../scss/components/variable';
+
+.taskBox {
+  @extend %task-box;
+
+  .taskName {
+    @extend %font-style;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: $secondary-text-color;
+  }
+
+  .listItem {
+    @extend %font-style;
+    //margin: 5px 0;
+    color: $third-text-color;
+
+    &.disabled {
+      text-decoration: line-through;
+    }
+  }
+}

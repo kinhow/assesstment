@@ -1,0 +1,28 @@
+@import '../../scss/components/variable';
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.modalOverlay {
+  @extend %valign;
+  animation: fadeIn 200ms ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+
+  // .modalDialog {
+  //   border-radius: 5px;
+  //   padding: 20px;
+  //   position: absolute;
+  //   top: 52%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 1;
+  // }
+}

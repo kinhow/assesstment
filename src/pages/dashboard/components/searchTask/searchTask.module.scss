@@ -1,0 +1,129 @@
+@import '../../../../scss/components/variable';
+
+.listItem {
+  @extend %align;
+  padding: 15px 0;
+  border-bottom: 2px solid #E8E8E8;
+
+  &:last-child() {
+    border-bottom: none;
+  }
+
+  // input {
+  //   flex: 1;
+  //   transform : scale(1.5); 
+  //   border: 1px solid #95A4AB;
+  // }
+
+  input[type="checkbox"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 0;
+
+    + label {
+      @extend %valign;
+      flex: 1;
+      position: relative;
+      cursor: pointer;
+      margin-left: 10px;
+
+      &:before {
+        content: "";
+        top: 0;
+        left: 0;
+        padding: 10px;
+        border: 2px solid #95A4AB;
+        border-radius: 0.25rem;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0.4rem;
+        top: 0rem;
+        width: 0.5rem;
+        height: 1rem;
+        background-color: transparent;
+        display: block;
+        opacity: 0;
+        border-bottom: 3px solid #95A4AB;
+        border-right: 3px solid #95A4AB;
+        transform: rotate(45deg);
+        transition: border-color 0.3s ease;
+      }
+
+      &.disabled {
+        &:before {
+          content: "";
+          top: 0;
+          left: 0;
+          padding: 10px;
+          border: 2px solid #95A4AB;
+          border-radius: 0.25rem;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0.4rem;
+          top: 0rem;
+          width: 0.5rem;
+          height: 1rem;
+          background-color: transparent;
+          display: block;
+          opacity: 1;
+          border-bottom: 3px solid #95A4AB;
+          border-right: 3px solid #95A4AB;
+          transform: rotate(45deg);
+          transition: border-color 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .textBox {
+    flex: 25;
+
+    input {
+      border: none;
+      margin: 0 0 0 5px;
+      transform : none;
+      letter-spacing: unset;
+      background-color: transparent;
+    }
+
+    .disabled {
+      color: $secondary-text-color;
+      text-decoration: line-through;
+    }
+  }
+
+  .listName {
+    @extend %font-style;
+    flex: 25;
+    font-size: 20px;
+    margin-left: 15px;
+    color: $primary-text-color;
+  }
+
+  .listIcon {
+    @extend %align;
+
+    .icon {
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+}

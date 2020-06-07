@@ -1,0 +1,34 @@
+@import '../../scss/components/variable';
+
+.header {
+  @extend %align;
+  padding: 10px 20px;
+  background-color: $background-primary;
+  box-shadow: 0px 5px 10px #ccc;
+
+  .wrapper {
+    @extend %align;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .profile {
+    @extend %align;
+    flex: 1;
+
+    .image {
+      width: 60px;
+    }
+  
+    .userName {
+      @extend %font-style;
+      margin-left: 10px;
+    }
+  }
+
+  .logout {
+    @extend %font-style;
+    cursor: pointer;
+    color: $secondary-text-color;
+  }
+}

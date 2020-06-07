@@ -1,0 +1,92 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: #F4F4F6;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+
+  h1, h2, h3, h4, h5, p, div, span, i, img {
+    user-select: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: #ffffff;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 1.2px;
+  background-color: #EEF1F8;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Scroll Bar 
+html, body {
+  & {
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-track {
+      width: 5px;
+      border: none;
+      background: transparent;
+  
+      &:horizontal {
+        height: 5px;
+      }
+    }
+  
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-track-piece,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-resizer {
+      display: none;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: darkgrey;
+    }
+  
+    ::-webkit-scrollbar-track {
+      background-image: url('../../assets/scrollbarbg.svg');
+      background-repeat: repeat-y;
+  
+      &:horizontal {
+        background: none;
+      }
+    }
+  }
+}
