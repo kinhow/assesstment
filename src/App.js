@@ -18,7 +18,7 @@ const App = () => {
             <Route path='/dashboard' component={DashBoard} />
           </ModalProvider>
         </Switch>
-        <Route exact path='/' component={Login} />
+        {/* <Route exact path='/' component={Login} /> */}
       </Router>
     </UserProvider>
   );
